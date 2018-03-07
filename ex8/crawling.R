@@ -1,4 +1,4 @@
-# install.packages(c('httr', 'rvest'))
+install.packages(c('httr', 'rvest'))
 
 library(httr)
 library(rvest)
@@ -6,8 +6,10 @@ library(dplyr)
 library(stringr)
 
 #국제시장
+url <- "http://google.com"
 res <- GET(url)
 h <- read_html(res, encoding = "ms949")
+h
 
 #empty vector
 first_page_final <- NULL
